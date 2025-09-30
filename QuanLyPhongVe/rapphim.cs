@@ -63,6 +63,7 @@ namespace QuanLyPhongVe
 
         private void BtnGhe_Click(object sender, EventArgs e)
         {
+
             Button btn = sender as Button;
             if (btn == null) return;
 
@@ -83,7 +84,19 @@ namespace QuanLyPhongVe
                 btn.BackColor = Color.LightBlue;
                 gheDangChon.Add(btn);
             }
+            CapNhatTongTienTamThoi();
+
         }
+        private void CapNhatTongTienTamThoi()
+        {
+            int tong = 0;
+            foreach (var ghe in gheDangChon)
+            {
+                tong += giaVe[(int)ghe.Tag];
+            }
+            labelTongTien.Text = tong.ToString("N0") + " VND";
+        }
+
 
         private void button21_Click(object sender, EventArgs e) // Thêm
         {
@@ -123,6 +136,8 @@ namespace QuanLyPhongVe
             textBox2.Clear();
             comboBox1.SelectedIndex = -1;
             comboBox2.SelectedIndex = -1;
+            CapNhatTongTienTamThoi();
+
         }
 
         private void button22_Click(object sender, EventArgs e) // Xóa
