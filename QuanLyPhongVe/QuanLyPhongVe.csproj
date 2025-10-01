@@ -46,12 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AESHelper.cs" />
     <Compile Include="chitietghe.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="chitietghe.Designer.cs">
       <DependentUpon>chitietghe.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseHelper.cs" />
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +73,9 @@
     </Compile>
     <Compile Include="rapphim.Designer.cs">
       <DependentUpon>rapphim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="staffMenu.cs">
+      <SubType>Form</SubType>
     </Compile>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
